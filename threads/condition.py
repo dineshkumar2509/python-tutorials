@@ -70,7 +70,7 @@ class Consumer(threading.Thread):
             self.condition.release()
 
 def main():
-    integers = []
+    integers = list()
     condition = threading.Condition()
     t1 = Producer(integers, condition)
     t2 = Consumer(integers, condition)
